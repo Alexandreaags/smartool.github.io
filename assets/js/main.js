@@ -313,7 +313,7 @@
       new ResizeObserver(function() { // ResizeObserver é usado para observar mudancas no tamanho do elemento "main" e acionar uma funcao sempre que ocorrerem
         select('.echart', true).forEach(getEchart => { // dentro dessa funcao o codigo procura por elementos HTML com a classe "echart" usando select('.echart', true)
           echarts.getInstanceByDom(getEchart).resize(); // para cada elemento encontrado, ele obtém a instancia do grafico Echart associado ao elemento usado echarts.getInstanceByDom(getEchart)
-        }) //Em seguido, ele chama o método ´resize()´ da instancia do grafico para ajustar o seu tamanho a nova dimensao do elemento
+        }) //Em seguida, ele chama o método ´resize()´ da instancia do grafico para ajustar o seu tamanho a nova dimensao do elemento
       }).observe(mainContainer);
     }, 200);
   }
