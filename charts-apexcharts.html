@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Charts / ApexCharts - NiceAdmin Bootstrap Template</title>
+  <title>Charts / Tool Charts</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -417,7 +417,7 @@
           </li>
           <li>
             <a href="charts-apexcharts.html" class="active">
-              <i class="bi bi-circle"></i><span>ApexCharts</span>
+              <i class="bi bi-circle"></i><span>Tool Charts</span>
             </a>
           </li>
           <li>
@@ -509,17 +509,17 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>ApexCharts</h1>
+      <h1>Tool Charts</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item">Charts</li>
-          <li class="breadcrumb-item active">ApexCharts</li>
+          <li class="breadcrumb-item active">Tool Charts</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
-    <p>ApexCharts Examples. You can check the <a href="https://apexcharts.com/javascript-chart-demos/" target="_blank">official website</a> for more examples.</p>
+    <!-- <p>ApexCharts Examples. You can check the <a href="https://apexcharts.com/javascript-chart-demos/" target="_blank">official website</a> for more examples.</p> -->
 
     <section class="section">
       <div class="row">
@@ -527,9 +527,9 @@
         <div class="col-lg-6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Line Chart</h5>
+              <h5 class="card-title">Battery Level</h5>
 
-              <!-- Line Chart -->
+              <!-------------------------------------------------------------------------------------------- Battery Level ----------------------------------------------------------------------------------------------------------------------->
               <div id="lineChart"></div>
 
               <script>
@@ -564,18 +564,60 @@
                   }).render();
                 });
               </script>
-              <!-- End Line Chart -->
-
+              <!-------------------------------------------------------------------------------------------- End Battery Level ----------------------------------------------------------------------------------------------------------------------->
+              
             </div>
           </div>
         </div>
-
         <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Accelerometer</h5>
+
+              <!-------------------------------------------------------------------------------------------- Accelerometer ----------------------------------------------------------------------------------------------------------------------->
+              <div id="lineChart2"></div>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new ApexCharts(document.querySelector("#lineChart2"), {
+                    series: [{
+                      name: "Desktops",
+                      data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+                    }],
+                    chart: {
+                      height: 350,
+                      type: 'line',
+                      zoom: {
+                        enabled: false
+                      }
+                    },
+                    dataLabels: {
+                      enabled: false
+                    },
+                    stroke: {
+                      curve: 'straight'
+                    },
+                    grid: {
+                      row: {
+                        colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                        opacity: 0.5
+                      },
+                    },
+                    xaxis: {
+                      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                    }
+                  }).render();
+                });
+              </script>
+              <!-------------------------------------------------------------------------------------------- End Accelerometer ----------------------------------------------------------------------------------------------------------------------->
+
+
+        <!-- <div class="col-lg-6">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Area Chart</h5>
 
-              <!-- Area Chart -->
+               Area Chart 
               <div id="areaChart"></div>
 
               <script>
@@ -961,7 +1003,7 @@
                   }).render();
                 });
               </script>
-              <!-- End Area Chart -->
+              End Area Chart -->
 
             </div>
           </div>
@@ -970,10 +1012,47 @@
         <div class="col-lg-6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Column Chart</h5>
+              <h5 class="card-title">Closing Force</h5>
+
+              <!-------------------------------------------------------------------------------------------- Closing Force ----------------------------------------------------------------------------------------------------------------------->
+              <div id="lineChart3"></div>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new ApexCharts(document.querySelector("#lineChart3"), {
+                    series: [{
+                      name: "Desktops",
+                      data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+                    }],
+                    chart: {
+                      height: 350,
+                      type: 'line',
+                      zoom: {
+                        enabled: false
+                      }
+                    },
+                    dataLabels: {
+                      enabled: false
+                    },
+                    stroke: {
+                      curve: 'straight'
+                    },
+                    grid: {
+                      row: {
+                        colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                        opacity: 0.5
+                      },
+                    },
+                    xaxis: {
+                      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                    }
+                  }).render();
+                });
+              </script>
+              <!-------------------------------------------------------------------------------------------- End Closing Force ----------------------------------------------------------------------------------------------------------------------->
 
               <!-- Column Chart -->
-              <div id="columnChart"></div>
+              <!-- <div id="columnChart"></div>
 
               <script>
                 document.addEventListener("DOMContentLoaded", () => {
@@ -1027,7 +1106,7 @@
                     }
                   }).render();
                 });
-              </script>
+              </script> -->
               <!-- End Column Chart -->
 
             </div>
@@ -1037,10 +1116,49 @@
         <div class="col-lg-6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Bar Chart</h5>
+              <h5 class="card-title">Cavity Pressure</h5>
+
+
+              <!-------------------------------------------------------------------------------------------- Cavity Pressure ----------------------------------------------------------------------------------------------------------------------->
+              <div id="lineChart4"></div>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new ApexCharts(document.querySelector("#lineChart4"), {
+                    series: [{
+                      name: "Desktops",
+                      data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+                    }],
+                    chart: {
+                      height: 350,
+                      type: 'line',
+                      zoom: {
+                        enabled: false
+                      }
+                    },
+                    dataLabels: {
+                      enabled: false
+                    },
+                    stroke: {
+                      curve: 'straight'
+                    },
+                    grid: {
+                      row: {
+                        colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                        opacity: 0.5
+                      },
+                    },
+                    xaxis: {
+                      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                    }
+                  }).render();
+                });
+              </script>
+              <!-------------------------------------------------------------------------------------------- End Cavity Pressure ----------------------------------------------------------------------------------------------------------------------->
+
 
               <!-- Bar Chart -->
-              <div id="barChart"></div>
+              <!-- <div id="barChart"></div>
 
               <script>
                 document.addEventListener("DOMContentLoaded", () => {
@@ -1068,7 +1186,7 @@
                     }
                   }).render();
                 });
-              </script>
+              </script> -->
               <!-- End Bar Chart -->
 
             </div>
@@ -1078,10 +1196,46 @@
         <div class="col-lg-6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Pie Chart</h5>
+              <h5 class="card-title">Cavity Temperature</h5>
+              <!-------------------------------------------------------------------------------------------- Cavity Temperature ----------------------------------------------------------------------------------------------------------------------->
+              <div id="lineChart5"></div>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new ApexCharts(document.querySelector("#lineChart5"), {
+                    series: [{
+                      name: "Desktops",
+                      data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+                    }],
+                    chart: {
+                      height: 350,
+                      type: 'line',
+                      zoom: {
+                        enabled: false
+                      }
+                    },
+                    dataLabels: {
+                      enabled: false
+                    },
+                    stroke: {
+                      curve: 'straight'
+                    },
+                    grid: {
+                      row: {
+                        colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                        opacity: 0.5
+                      },
+                    },
+                    xaxis: {
+                      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                    }
+                  }).render();
+                });
+              </script>
+              <!-------------------------------------------------------------------------------------------- End Cavity Temperature ----------------------------------------------------------------------------------------------------------------------->
 
               <!-- Pie Chart -->
-              <div id="pieChart"></div>
+              <!-- <div id="pieChart"></div>
 
               <script>
                 document.addEventListener("DOMContentLoaded", () => {
@@ -1097,19 +1251,19 @@
                     labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E']
                   }).render();
                 });
-              </script>
+              </script> -->
               <!-- End Pie Chart -->
 
             </div>
           </div>
         </div>
-
+<!-- 
         <div class="col-lg-6">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Donut Chart</h5>
 
-              <!-- Donut Chart -->
+              Donut Chart
               <div id="donutChart"></div>
 
               <script>
@@ -1127,7 +1281,7 @@
                   }).render();
                 });
               </script>
-              <!-- End Donut Chart -->
+              End Donut Chart
 
             </div>
           </div>
@@ -1138,7 +1292,7 @@
             <div class="card-body">
               <h5 class="card-title">Radar Chart</h5>
 
-              <!-- Radar Chart -->
+              Radar Chart
               <div id="radarChart"></div>
 
               <script>
@@ -1158,7 +1312,7 @@
                   }).render();
                 });
               </script>
-              <!-- End Radar Chart -->
+              End Radar Chart
 
             </div>
           </div>
@@ -1169,7 +1323,7 @@
             <div class="card-body">
               <h5 class="card-title">Polar Area Chart</h5>
 
-              <!-- Polar Area Chart -->
+              Polar Area Chart
               <div id="polarAreaChart"></div>
 
               <script>
@@ -1192,7 +1346,7 @@
                   }).render();
                 });
               </script>
-              <!-- End Polar Area Chart -->
+              End Polar Area Chart
 
             </div>
           </div>
@@ -1203,7 +1357,7 @@
             <div class="card-body">
               <h5 class="card-title">Radial Bar Chart</h5>
 
-              <!-- Radial Bar Chart -->
+               Radial Bar Chart 
               <div id="radialBarChart"></div>
 
               <script>
@@ -1241,7 +1395,7 @@
                   }).render();
                 });
               </script>
-              <!-- End Radial Bar Chart -->
+              End Radial Bar Chart 
 
             </div>
           </div>
@@ -1252,7 +1406,7 @@
             <div class="card-body">
               <h5 class="card-title">Bubble Chart</h5>
 
-              <!-- Bubble Chart -->
+              Bubble Chart
               <div id="bubbleChart"></div>
 
               <script>
@@ -1320,7 +1474,7 @@
                   }).render();
                 });
               </script>
-              <!-- End Bubble Chart -->
+               End Bubble Chart -->
 
             </div>
           </div>

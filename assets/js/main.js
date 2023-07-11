@@ -299,21 +299,21 @@
   /**
    * Initiate Datatables
    */
-  const datatables = select('.datatable', true)
+  const datatables = select('.datatable', true) //Procura por elementos HTML com a classe "datatable"
   datatables.forEach(datatable => {
-    new simpleDatatables.DataTable(datatable);
+    new simpleDatatables.DataTable(datatable); //itera cada elemento encontrado e cria uma nova instancia da classe simpleDatatables.DataTable passando o elemento com argumento
   })
 
   /**
    * Autoresize echart charts
    */
-  const mainContainer = select('#main');
-  if (mainContainer) {
+  const mainContainer = select('#main'); // procura por um elemento HTML com id "main" usando a funcao select('#main')
+  if (mainContainer) { // Se o elemento "main" for encontrado ele aguarda 200ms e cria uma nova instancia de ResizeObserver 
     setTimeout(() => {
-      new ResizeObserver(function() {
-        select('.echart', true).forEach(getEchart => {
-          echarts.getInstanceByDom(getEchart).resize();
-        })
+      new ResizeObserver(function() { // ResizeObserver é usado para observar mudancas no tamanho do elemento "main" e acionar uma funcao sempre que ocorrerem
+        select('.echart', true).forEach(getEchart => { // dentro dessa funcao o codigo procura por elementos HTML com a classe "echart" usando select('.echart', true)
+          echarts.getInstanceByDom(getEchart).resize(); // para cada elemento encontrado, ele obtém a instancia do grafico Echart associado ao elemento usado echarts.getInstanceByDom(getEchart)
+        }) //Em seguida, ele chama o método ´resize()´ da instancia do grafico para ajustar o seu tamanho a nova dimensao do elemento
       }).observe(mainContainer);
     }, 200);
   }
