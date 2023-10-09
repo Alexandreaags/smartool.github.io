@@ -520,9 +520,9 @@
       </nav>
     </div><!-- End Page Title -->
 
-    <section class="section">
-      <div class="row align-items-top">
-        <div class="col-lg-6">
+    <section class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
 
           <!-- Parts Manufactured -->
           <div class="card">
@@ -561,6 +561,23 @@
               </h6>
             </div>
           </div><!-- End Ambient Temperature -->
+
+           <!-- Ambient Humidity -->
+           <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Ambient Humidity</h5>
+              <h6 class="card-text" style="font-size: 20px;">
+                Last measured value: <span style="font-weight: bold;">50%</span>
+              </h6>
+              <h6 class="card-text" style="font-size: 20px;">
+                Mean Value: <span style="font-weight: bold;">46%</span>
+              </h6>
+            </div>
+          </div><!-- End Ambient Humidity -->
+
+        </div>
+
+        <div class="col-md-6 col-lg-4">
           <!-- Cavity Pressure -->
           <div class="card">
             <div class="card-body">
@@ -576,50 +593,8 @@
               </h6>
             </div>
           </div><!-- End Cavity Pressure -->
-          <!-- Tool Cycles -->
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Cycles</h5>
-              <h6 class="card-text" style="font-size: 20px;">
-                Cycles until overhaul: <span style="font-weight: bold;">120.456</span>/200.000
-              </h6>
-            </div>
-          </div><!-- End Cycles-->
-
-
-        </div>
-
-        <div class="col-lg-6">
-          
-          <!-- Ambient Humidity -->
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Ambient Humidity</h5>
-              <h6 class="card-text" style="font-size: 20px;">
-                Last measured value: <span style="font-weight: bold;">50%</span>
-              </h6>
-              <h6 class="card-text" style="font-size: 20px;">
-                Mean Value: <span style="font-weight: bold;">46%</span>
-              </h6>
-            </div>
-          </div><!-- End Ambient Humidity -->
-          <!-- Closing Force -->
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Clamping Force</h5>
-              <h6 class="card-text" style="font-size: 20px;">
-                Last measured value: <span style="font-weight: bold;">468kN</span>
-              </h6>
-              <h6 class="card-text" style="font-size: 20px;">
-                Mean Value: <span style="font-weight: bold;">497kN</span>
-              </h6>
-              <h6 class="card-text" style="font-size: 20px;">
-                Set value in machine: <span style="font-weight: bold;">500kN</span>
-              </h6>
-            </div>
-          </div><!-- End Closing Force -->
-          <!-- Cavity Temperature -->
-          <div class="card">
+           <!-- Cavity Temperature -->
+           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Cavity Temperature</h5>
               <h6 class="card-text" style="font-size: 20px;">
@@ -640,12 +615,43 @@
               <h6 class="card-text" style="font-size: 20px; font-weight: bold;">Demolding... </h6>
             </div>
           </div><!-- End Process Status -->
+          <!-- Tool Cycles -->
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Cycles</h5>
+              <h6 class="card-text" style="font-size: 20px;">
+                Cycles until overhaul: <span style="font-weight: bold;">120.456</span>/200.000
+              </h6>
+            </div>
+          </div><!-- End Cycles-->
+
+
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          
+          <!-- Closing Force -->
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Clamping Force</h5>
+              <h6 class="card-text" style="font-size: 20px;">
+                Last measured value: <span style="font-weight: bold;">468kN</span>
+              </h6>
+              <h6 class="card-text" style="font-size: 20px;">
+                Mean Value: <span style="font-weight: bold;">497kN</span>
+              </h6>
+              <h6 class="card-text" style="font-size: 20px;">
+                Set value in machine: <span style="font-weight: bold;">500kN</span>
+              </h6>
+            </div>
+          </div><!-- End Closing Force -->
+         
           
           <!-- Location -->
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Location</h5>
-              <img src="assets/img/Illustrative_location.jpeg" alt="" style="max-width: 100%; width: auto;">
+              <img src="assets/img/Illustrative_location.jpeg" alt="" style="max-width: 100%; max-height: 200%; width: auto;">
               <!-- <h6 class="card-text" style="font-size: 20px; font-weight: bold;">49°40′59″ N 10°31′59″ E</h6> -->
             </div>
           </div> <!--End Location -->
