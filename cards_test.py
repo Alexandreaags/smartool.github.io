@@ -1,4 +1,6 @@
 import dash
+from sqlalchemy import create_engine
+import pandas as pd
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.express as px
@@ -6,6 +8,14 @@ from dash.dependencies import Input, Output
 import random
 
 app = dash.Dash(__name__)
+
+sqlEngine       = create_engine('mysql+pymysql://ipk:fraunhoferipk@192.168.137.1', pool_recycle=3600)
+
+dbConnection    = sqlEngine.connect()
+
+frame           = pd.read_sql("select * from arduino.sql_results ", dbConnection)
+
+
 
 # Create a simple dashboard layout
 app.layout = html.Div([
@@ -59,7 +69,7 @@ app.layout = html.Div([
     [Input('interval-component', 'n_intervals')]
 )
 def update_metrics(n):
-    data_parts_produced = round(random.uniform(100000, 200000), 2)
+    data_parts_produced = pd.read_sql("select * from arduino.sql_results  ", dbConnection) #round(random.uniform(100000, 200000), 2)
     data_parts_Out_tolerance = round(random.uniform(1000, 10000), 2)
     data_Feasable_parts = round(random.uniform(100000, 200000), 2)
     data_cycles = round(random.uniform(100000, 200000), 2)
@@ -198,3 +208,4 @@ def update_metrics(n):
 
 if __name__ == '__main__':
     app.run_server(debug=True)
+    dbConnection.close()
